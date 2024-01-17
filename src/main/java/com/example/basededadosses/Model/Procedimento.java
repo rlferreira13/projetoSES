@@ -1,12 +1,12 @@
 package com.example.basededadosses.Model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.UUID;
 
 @Getter
 @Setter
@@ -14,13 +14,14 @@ import lombok.Setter;
 @Entity
 @Table
 @NoArgsConstructor
-class Procedimento {
+public class Procedimento {
 
     @Id
-    private Long codigo;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private UUID codigo;
     private String titulo;
     private String resumo;
     private String descricao;
-    private String imgUrl;
+    private String urlDaImagem;
 
 }
