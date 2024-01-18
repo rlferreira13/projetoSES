@@ -1,4 +1,4 @@
-package com.example.basededadosses;
+package com.br.basededadosses;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
